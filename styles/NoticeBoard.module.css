@@ -1,0 +1,72 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.formBox {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.saveBtn {
+  background: black;
+}
+
+.updateBtn {
+  background: blue;
+}
+
+.deleteBtn {
+  background: red;
+}
+
+.noticeMeta {
+  margin-top: 10px;
+  color: gray;
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 12px;
+}
