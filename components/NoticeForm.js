@@ -13,6 +13,15 @@ export default function NoticeForm({ refresh }) {
   async function submit(e) {
     e.preventDefault();
 
+    if (
+      !form.title ||
+      !form.body ||
+      !form.publishDate
+    ) {
+      alert("Please fill all required fields");
+      return;
+    }
+
     const res = await fetch("/api/notices", {
       method: "POST",
       headers: {
@@ -31,6 +40,8 @@ export default function NoticeForm({ refresh }) {
         priority: "Normal",
         publishDate: "",
       });
+    } else {
+      alert("Failed to create notice");
     }
   }
 
@@ -39,19 +50,25 @@ export default function NoticeForm({ refresh }) {
 
       <input
         className={styles.input}
-        placeholder="Title"
+        placeholder="Enter Notice Title"
         value={form.title}
         onChange={(e) =>
-          setForm({ ...form, title: e.target.value })
+          setForm({
+            ...form,
+            title: e.target.value,
+          })
         }
       />
 
       <textarea
         className={styles.textarea}
-        placeholder="Body"
+        placeholder="Enter Notice Details"
         value={form.body}
         onChange={(e) =>
-          setForm({ ...form, body: e.target.value })
+          setForm({
+            ...form,
+            body: e.target.value,
+          })
         }
       />
 
@@ -68,7 +85,7 @@ export default function NoticeForm({ refresh }) {
       />
 
       <select
-        className={styles.input}
+        className={styles.select}
         value={form.category}
         onChange={(e) =>
           setForm({
@@ -77,13 +94,22 @@ export default function NoticeForm({ refresh }) {
           })
         }
       >
-        <option>General</option>
-        <option>Exam</option>
-        <option>Event</option>
+        <option value="General">
+          General
+        </option>
+
+        <option value="Exam">
+          Exam
+        </option>
+
+        <option value="Event">
+          Event
+        </option>
+
       </select>
 
       <select
-        className={styles.input}
+        className={styles.select}
         value={form.priority}
         onChange={(e) =>
           setForm({
@@ -92,11 +118,18 @@ export default function NoticeForm({ refresh }) {
           })
         }
       >
-        <option>Normal</option>
-        <option>Urgent</option>
+        <option value="Normal">
+          Normal
+        </option>
+
+        <option value="Urgent">
+          Urgent
+        </option>
+
       </select>
 
       <button
+        type="submit"
         className={`${styles.button} ${styles.saveBtn}`}
       >
         Save Notice

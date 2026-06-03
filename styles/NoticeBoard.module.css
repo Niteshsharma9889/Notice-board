@@ -1,72 +1,135 @@
 .container {
-  max-width: 900px;
-  margin: auto;
-  padding: 24px;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #fef3c7,
+    #fce7f3
+  );
 }
 
 .heading {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 24px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 30px;
 }
 
 .formBox {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 8px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.1);
 }
 
-.card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 16px;
-}
-
-.input {
+.input,
+.textarea,
+.select {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid gray;
-  border-radius: 4px;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 2px solid #dbeafe;
+  font-size: 15px;
 }
 
 .textarea {
-  width: 100%;
-  min-height: 80px;
-  padding: 10px;
-  margin-bottom: 10px;
+  min-height: 120px;
 }
 
 .button {
   border: none;
-  padding: 10px 16px;
+  padding: 12px 20px;
+  border-radius: 12px;
   cursor: pointer;
+  font-weight: bold;
   color: white;
   margin-right: 10px;
-  border-radius: 4px;
+  transition: .2s;
+}
+
+.button:hover {
+  transform: scale(1.05);
 }
 
 .saveBtn {
-  background: black;
+  background: #2563eb;
 }
 
 .updateBtn {
-  background: blue;
+  background: #10b981;
 }
 
 .deleteBtn {
-  background: red;
+  background: #ef4444;
 }
 
-.noticeMeta {
-  margin-top: 10px;
-  color: gray;
+.card {
+  max-width: 800px;
+  margin: 25px auto;
+  background: white;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  position: relative;
 }
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
 .card h2 {
+  color: #1d4ed8;
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
 .card p {
-  margin-bottom: 12px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.noticeMeta {
+  margin-bottom: 15px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.general {
+  background: #bfdbfe;
+}
+
+.exam {
+  background: #fde68a;
+}
+
+.event {
+  background: #fbcfe8;
+}
+
+.priority {
+  background: #fecaca;
+}
+
+.date {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
 }
